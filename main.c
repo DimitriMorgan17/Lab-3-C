@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 #include <readline/readline.h>
-#include<stdlib.h>
+#include <stdlib.h>
 
 int sum_n(int x){
     if (x >= 1){
@@ -16,20 +16,22 @@ int sum_n(int x){
     else 
       return x;
 }
-//void print_n(const char *s, int n){
- // if (n > 0){
-  //  printf ("s");
-  //  print_n(s,n-1);
-  //}
- // else{}
-//}
 
+void print_n(const char *s, int x){
+  if (x > 0){
+    printf("%s\n", s);
+    return print_n(s, x-1);
+  }
+  else {
+    return;
+  }
+}
 
 int main() {
   int n;
-  printf ("Enter an int: ");
+  printf ("Enter an int: \n");
   scanf("%d",&n);
-  printf("sum is %d.", sum_n(n));
-  //char *s = readline("Enter a string: ");
-  //printf("%a", print_n(s));
+  printf("sum is %d.\n", sum_n(n));
+  char *s = readline("Enter a string: \n");
+  print_n(s, n);
 }
