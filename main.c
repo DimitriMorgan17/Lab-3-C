@@ -13,17 +13,14 @@ int sum_n(int x){
     if (x >= 1){
       return (x+(sum_n(x-1)));
     }
-    else 
-      return x;
+
+    return x;
 }
 
 void print_n(const char *s, int x) {
   if (x > 0){
     printf("%s\n", s);
-    return print_n(s, x-1);
-  }
-  else {
-    return;
+    print_n(s, x-1);
   }
 }
 
@@ -34,4 +31,6 @@ int main() {
   scanf("%d", &n);
   printf("sum is %d.\n", sum_n(n));
   print_n(readline("Enter a string: "), n);
+
+  return 0;
 }
