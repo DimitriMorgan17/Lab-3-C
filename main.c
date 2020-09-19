@@ -29,7 +29,6 @@ void print_n(const char *s, int x) {
 
 int main() {
   int n;
-  char buffer[128];
 
   printf ("Enter an int: ");
   scanf("%d", &n);
