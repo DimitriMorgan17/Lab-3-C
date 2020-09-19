@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <readline/readline.h>
 #include <stdlib.h>
+#include <readline/history.h>
 
 int sum_n(int x){
     if (x >= 1){
@@ -32,6 +33,6 @@ int main() {
   printf ("Enter an int: \n");
   scanf("%d",&n);
   printf("sum is %d.\n", sum_n(n));
-  char *s = readline("Enter a string: \n");
+  char *s = readline("Enter a string: ");
   print_n(s, n);
 }
