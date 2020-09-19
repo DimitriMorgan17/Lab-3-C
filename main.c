@@ -28,7 +28,7 @@ void print_n(const char *s, int x) {
 }
 
 int main() {
-  int n;
+  int n = 0;
 
   printf ("Enter an int: ");
   scanf("%d", &n);
